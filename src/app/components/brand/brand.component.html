@@ -1,0 +1,12 @@
+<br>
+<div class="btn-group">
+  <button type="button" style="width:180px" class="getAllBrandClass() btn btn-primary btn-lg"
+  routerLink="/cars">Tüm Markalar</button>
+  <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+    <span class="visually-hidden">Toggle Dropdown</span>
+  </button>
+  <ul class="dropdown-menu">
+    <li (click)="setCurrentBrand(brand)" *ngFor="let brand of brands" 
+    [class]="getCurrentBrandClass(brand)"><a class="dropdown-item" routerLink="/cars/brand/{{brand.id}}">{{brand.brandName}}</a></li>
+  </ul>
+</div>

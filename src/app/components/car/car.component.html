@@ -1,0 +1,23 @@
+<div class="row">
+  <div class="col-md-4" *ngFor = "let car of cars">
+    <div class="card" style="width: 18rem;">
+      <img [attr.src] ="getCarImage(car)" class="btn btn-outline-secondary img-fluid img-thumbnail" width="300" height="300" (click) = "setCurrentCar(car)"  routerLink = "/cars/car-detail-page/{{car.id}}">
+      <div class="card-body">
+        <h4 class="card-title text-center">{{car.brandName }} </h4>
+        <h6 class="text-center">{{car.description}} </h6>
+      </div>
+      <ul class="list-group list-group-flush text-center text-bolder">
+        <li class="list-group-item"><i><b>Model Yılı</b></i> | {{car.modelYear}}</li> 
+        <li class="list-group-item"><i><b>Günlük Fiyat</b></i> | {{car.dailyPrice }}₺</li>
+        <li class="list-group-item"><i><b>Aylık Fiyat</b></i> | {{car.dailyPrice*24  }}₺</li>
+
+      </ul>
+      <div class="card-body text-center">
+        <a href="#" class="btn btn-primary" (click) = "setCurrentCar(car)"  routerLink = "/cars/car-detail-page/{{car.id}}">Detaya Git</a>
+      
+      </div>
+    </div>
+    <br>
+  </div>
+ 
+</div>

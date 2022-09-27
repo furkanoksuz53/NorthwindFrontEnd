@@ -1,0 +1,88 @@
+<div class="card w-75 mx-auto mt-5">
+    <div class="card-header bg-success">
+      <h3 class="text-center mb-3 mt-3">ÖDEME</h3>
+    </div>
+    <div class="card-body">
+      <form
+        [formGroup]="paymentForm"
+        class="text-dark fw-bolder"
+        (ngSubmit)="completePayment()"
+      >
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group text-center">
+              <label class="my-4">Ad</label>
+              <input
+                type="text"
+                class="form-control text-uppercase"
+                formControlName="firstName"
+                placeholder="first name"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group text-center">
+              <label class="my-4">Soyad</label>
+              <input
+                type="text"
+                class="form-control text-uppercase"
+                formControlName="lastName"
+                placeholder="last name"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-12">
+            <div class="from-group text-center">
+              <label class="my-4">Kredi Kartı Numarası</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="cardNumber"
+                placeholder="1234 5678 3456 7890"
+              />
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group text-center">
+              <label class="my-4">Son Kullanma Tarihi</label>
+              <div class="input-group">
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="expiringMonth"
+                  placeholder="MM"
+                />
+                <input
+                  type="text"
+                  class="form-control"
+                  formControlName="expiringYear"
+                  placeholder="YYY"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="col-md-3">
+            <div class="form-group text-center">
+              <label class="my-4">CVC</label>
+              <input
+                type="text"
+                class="form-control"
+                formControlName="CVC"
+                placeholder="***"
+              />
+            </div>
+          </div>
+        </div>
+        <button
+        *ngIf="currentCar"
+          type="submit"
+          class="btn btn-info d-block w-25 mt-4 mx-auto"    
+          
+        >
+          Öde: {{currentCar.dailyPrice| currency: "TL" }}
+        </button>
+      </form>
+    </div>
+  </div>

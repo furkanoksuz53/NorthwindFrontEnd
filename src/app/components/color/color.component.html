@@ -1,0 +1,12 @@
+  <br>
+  <div class="btn-group">
+    <button type="button" style="width:180px" class="getAllColorClass() btn btn-success btn-lg"
+    routerLink="/cars">Tüm Renkler</button>
+    <button type="button" class="btn btn-success dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+      <span class="visually-hidden">Toggle Dropdown</span>
+    </button>
+    <ul class="dropdown-menu">
+      <li (click)="setCurrentColor(color)" *ngFor="let color of colors" 
+      [class]="getCurrentColorClass(color)"><a class="dropdown-item" routerLink="/cars/color/{{color.id}}">{{color.colorName}}</a></li>
+    </ul>
+  </div>
