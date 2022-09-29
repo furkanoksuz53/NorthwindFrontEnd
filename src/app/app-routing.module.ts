@@ -14,6 +14,7 @@ import { PaymentComponent } from './components/payment/payment.component';
 import { RentalComponent } from './components/rental/rental.component';
 import { CarUpdateComponent } from './components/car-update/car-update.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 const routes: Routes = [
   {path:"",pathMatch:"full", component:CarComponent},
@@ -32,6 +33,7 @@ const routes: Routes = [
   {path:"cars/update",component:CarUpdateComponent},
   {path:"brands/update",component:BrandUpdateComponent},
   {path:"login", component:LoginComponent},
+  {path:"register", component:RegisterComponent},
   
 ];
 

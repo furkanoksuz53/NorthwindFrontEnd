@@ -22,6 +22,7 @@ import { CarUpdateComponent } from './components/car-update/car-update.component
 import { ColorUpdateComponent } from './components/color-update/color-update.component';
 import { BrandUpdateComponent } from './components/brand-update/brand-update.component';
 import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +42,7 @@ import { LoginComponent } from './components/login/login.component';
     ColorUpdateComponent,
     BrandUpdateComponent,
     LoginComponent,
+    RegisterComponent,
     
   ],
   imports: [
